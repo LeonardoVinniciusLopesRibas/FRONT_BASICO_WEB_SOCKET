@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Unipar</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js" defer></script>
+</head>
+
+<body>
+    <div id="welcome-form" class="centered">
+        <h2>Seja Bem-Vindo ao Chat Unipar</h2>
+        <input type="text" id="username" placeholder="Informe um nick" />
+        <button onclick="enterChatRoom()">Acessar a sala para conversar com as pessoas</button>
+    </div>
+
+    <div id="chat-room" class="hidden">
+        <h2>Sala de Bate-Papo Unipar 6º Período ADS</h2>
+        <div id="messages" class="message-box"></div>
+        <input type="text" id="messageInput" placeholder="Escreva aqui" />
+        <button onclick="sendMessage()">Enviar</button>
+        <button onclick="leaveChat()">Sair</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
